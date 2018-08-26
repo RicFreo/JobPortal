@@ -101,7 +101,7 @@ require_once("db.php");
 			<div class = "row">
 				<h2 class="text-center"> Latest Jobs Post</h2>
 						<?php
-							$sql = "SELECT * FROM tbljob_post Order by Rand() Limit 4";
+							$sql = "SELECT * FROM job_posts Order by Rand() Limit 4";
 							$result = $conn -> query($sql);				
 								if($result -> num_rows > 0 )
 								{
@@ -110,8 +110,8 @@ require_once("db.php");
 								{
 						?>
 							<div class="col-md-6 fixHeight">
-							<h3><?php echo $row['jobtitle']; ?></h3>
-							<p><?php echo $row['description']; ?></p>
+							<h3><?php echo $row['Title']; ?></h3>
+							<p><?php echo $row['Description']; ?></p>
 							<button><a href="view-job.php?id=<?php echo $row['id_jobpost']; ?>">View</a></button>
 						</div>
 						<?php	
@@ -128,7 +128,7 @@ require_once("db.php");
 			<div class= "row">
 				<h2 class="text-center">List of Company</h2>
 					<?php
-							$sql = "SELECT * FROM tblcompany Order by Rand() Limit 4";
+							$sql = "SELECT * FROM company_profile Order by Rand() Limit 4";
 							$result = $conn -> query($sql);				
 								if($result -> num_rows > 0 )
 								{
@@ -137,8 +137,9 @@ require_once("db.php");
 								{
 						?>
 							<div class="col-md-6 fixHeight">
-							<h3><?php echo $row['companyname']; ?></h3>
-							<p><?php echo $row['hoc']; ?></p>
+							<h3><?php echo $row['Name']; ?></h3>
+							<p><?php echo $row['Field']; ?></p>
+							<p><?php echo $row['Website']; ?></p>
 							<button><a href="view-company.php?id=<?php echo $row['id_company']; ?>">View</a></button>
 						</div>
 						<?php	
