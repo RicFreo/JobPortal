@@ -24,8 +24,7 @@ require_once("db.php");
     <![endif]-->
   </head>
   <body>
-   
-  
+     
 	<!--NAVIGATION BAR-->
    	<header>
 					<nav class="navbar navbar-default">
