@@ -120,7 +120,7 @@ require_once("db.php");
 			</div>
 		</div>
 	</section>
-	<head></head>
+	
 	<!-- COMPANY's LIST -->
 	<section>
 		<div class= "container">
